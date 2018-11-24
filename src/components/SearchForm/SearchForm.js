@@ -8,11 +8,12 @@ import {
 import Select from 'react-select';
 import Animated from 'react-select/lib/animated';
 import _ from 'lodash';
+// import _ from 'underscore';
 
 
 //@TODO test it later with IDS instead of text at values
 const options = [
-  { value: 'chocolate',  label: 'Chocolate',  isDisabled: false },
+  { value: 'chocolate',  label: 'Chocolate',  isDisabled: true },
   { value: 'strawberry', label: 'Strawberry', isDisabled: false },
   { value: 'vanilla',    label: 'Vanilla',    isDisabled: false },
   { value: 'vanilla-ice',    label: 'Vanilla Ice',    isDisabled: false },
@@ -27,8 +28,8 @@ class SearchForm extends Component {
     super(props)
 
     this.state = {
-      selectedOption1: null,
-      selectedOption2: null
+      selectedOption1: [],
+      selectedOption2: []
     }
 
     this.handleChange2       = this.handleChange2.bind(this);
@@ -41,21 +42,34 @@ class SearchForm extends Component {
   handleChange1 = (options) => {
     // this.setState({ selectedOption1 });
     // console.log(options.value)
+    // var values = _.flatMap(options, function(item) {
+    //   return item.value;
+    // });
+    // var values = _.pluck(options, ["value", "label"]);
+    // console.log(values)
 
-    var values = _.flatMap(options, function(item) {
-      return item.value;
-    });
+    var values = [];
+    _.map(options,(item) => {
+      values.push({ 'value': item.value, 'label': item.label });
+    })
     console.log(values)
-    // this.setState({ selectedOption1: values });
+
+    this.setState({ selectedOption1: values });
     console.log(`Option selected:`, options);
   }
 
   handleChange2 = (options) => {
-    var values = _.flatMap(options, function(item) {
-      return item.value;
-    });
-    console.log(values)
-    // this.setState({ selectedOption1: values });
+    // var values = _.flatMap(options, function(item) {
+    //   return item.value;
+    // });
+    // var values = _.pluck(options, "value");
+    // var values = _.pluck(options, ["value", "label"]);
+    var values = []
+    _.map(options,(item) => {
+      values.push({ 'value': item.value, 'label': item.label });
+    })
+    // console.log(z)
+    this.setState({ selectedOption2: values });
     console.log(`Option selected:`, options);
   }
 
@@ -95,22 +109,23 @@ class SearchForm extends Component {
               value={selectedOption1}
               onChange={this.handleChange1}
               options={options}
-
+              isMulti={true}
             />
 
             <Select
               value={selectedOption2}
               onChange={this.handleChange2}
               options={options}
+              isMulti={true}
             />
 
         </Form>
 
         <div>
-          One - {!(selectedOption1)? null : selectedOption1}
+          One - {!(selectedOption1)? "nothing" : selectedOption1}
         </div>
         <div>
-          Two - {!(selectedOption2)? null : selectedOption2}
+          Two - {!(selectedOption2)? "nothing" : selectedOption2}
         </div>
 
 
