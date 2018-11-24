@@ -3,14 +3,11 @@ import {
   Form,
   Input,
   Col,
-  Button,
-  Select
+  Button
 } from 'antd';
-
-// import Select from 'react-select';
-// import Animated from 'react-select/lib/animated';
+import Select from 'react-select';
+import Animated from 'react-select/lib/animated';
 import _ from 'lodash';
-import SelectContainer from './SelectContainer';
 // import _ from 'underscore';
 
 
@@ -66,7 +63,7 @@ class SearchForm extends Component {
     // })
     // console.log(values)
     //
-    // this.setState({ selectedOption1: options });
+    this.setState({ selectedOption1: options });
     console.log(`Option selected:`, options);
   }
 
@@ -82,7 +79,7 @@ class SearchForm extends Component {
     // })
     // // console.log(z)
     // this.setState({ selectedOption2: values });
-    // this.setState({ selectedOption2: options });
+    this.setState({ selectedOption2: options });
     console.log(`Option selected:`, options);
   }
 
@@ -97,11 +94,19 @@ class SearchForm extends Component {
  componentDidUpdate(prevProps, prevState) {
    console.log('update');
 
-   // console.log(this.state.selectedOption1)
-   // console.log(this.state.selectedOption2)
+   console.log(this.state.selectedOption1)
+   console.log(this.state.selectedOption2)
 
  }
 
+ // <Select
+ //   value={selectedOption1}
+ //   onChange={this.handleChange1}
+ //   options={options}
+ //   isMulti
+ //   isSearchable
+ //   components={Animated()}
+ // />
 
   render(){
     const  selectedOption1  = this.state.selectedOption1;
@@ -110,8 +115,20 @@ class SearchForm extends Component {
       <Fragment>
         <Form onSubmit={this.handleSubmit}>
 
-            <SelectContainer />
-            <SelectContainer />
+            <Select
+              value={selectedOption1}
+              onChange={this.handleChange1}
+              options={options}
+              isMulti={true}
+              closeMenuOnSelect={false}
+            />
+
+            <Select
+              value={selectedOption2}
+              onChange={this.handleChange2}
+              options={options}
+              closeMenuOnSelect={false}
+            />
 
         </Form>
 
