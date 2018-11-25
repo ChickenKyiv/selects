@@ -57,14 +57,35 @@ class SearchForm extends Component {
     // from parent component into child component
   }
 
-  handleChange1 = (options) => {
-    // this.setState({ selectedOption1 });
-    // console.log(options.value)
-    // var values = _.flatMap(options, function(item) {
-    //   return item.value;
+  handleChange1 = (selected) => {
+
+    // _.map((options),(item) => {
+    //
+    //   // console.log(item)
+    //   item.isDisabled = true;
     // });
-    // var values = _.pluck(options, ["value", "label"]);
-    // console.log(values)
+    // really bored, and making names badly. @TODO change it, ple A se
+    var clone_of_state_2 = this.state.options2;
+
+    // _.map(selected, (item) => {
+    //   // console.log(item);
+    //   var option = _.find(clone_of_state_2, { 'value': item });
+    //   console.log(option);
+    //
+    //
+    // })
+    //   console.log(options)
+
+      // console.log(clone_of_state_2['value'][selected[0]]);
+      var kle = _.map(clone_of_state_2, (item) => {
+
+        console.log( _.find(selected, item.value) )  
+        // _.mapValues(item, val => {
+        //   console.log(val);
+        // })
+      })
+
+
 
     // var values = [];
     // _.map(options,(item) => {
@@ -73,21 +94,11 @@ class SearchForm extends Component {
     // console.log(values)
     //
 
-    this.setState({ selectedOption1: options });
+    this.setState({ selectedOption1: selected });
     // console.log(`Option selected:`, options);
   }
 
   handleChange2 = (options) => {
-    // var values = _.flatMap(options, function(item) {
-    //   return item.value;
-    // });
-    // var values = _.pluck(options, "value");
-    // var values = _.pluck(options, ["value", "label"]);
-    // var values = []
-    // _.map(options,(item) => {
-    //   values.push({ 'value': item.value, 'label': item.label });
-    // })
-    // // console.log(z)
 
     // this.setState({ selectedOption2: values });
 
@@ -101,50 +112,52 @@ class SearchForm extends Component {
 
  proceedDisabledOptions() {
 
-   const { selectedOption1, selectedOption2 } = this.state;
-   // console.log(this.state.selectedOption1)
-   // console.log(this.state.selectedOption2)
-
-   console.log(selectedOption1)
-   console.log(selectedOption2)
+   const { selectedOption1, selectedOption2, options1 } = this.state;
 
 
-   // _.map((options),(item) => {
-   //
-   //   console.log(item)
-   //   item.isDisabled = true;
-   // });
-   //
-   // console.log(options);
+   // console.log(selectedOption1)
+   // console.log(selectedOption2)
+
+
+   _.map((options1),(item) => {
+
+     // console.log(item)
+     item.isDisabled = true;
+   });
+
+   console.log(options1);
  }
 
  componentDidUpdate(prevProps, prevState) {
    console.log('update');
 
-   this.proceedDisabledOptions() ;
+   // this.proceedDisabledOptions() ;
 
 
  }
 
  // <SelectContainer options={options} onChange={this.handleChange1} />
  // <SelectContainer options={options} onChange={this.handleChange2} />
+
   render(){
     const  selectedOption1  = this.state.selectedOption1;
     const  selectedOption2  = this.state.selectedOption2;
 
-    const option1 = this.state.option1;
-    const option2 = this.state.option2;
+    const { options1, options2 } = this.state;
+    // const  = this.state.option2;
+
+    // console.log(options1, options2);
 
     return (
       <Fragment>
         <Form onSubmit={this.handleSubmit}>
 
             <SelectContainer
-              options={option1}
+              options={options1}
               onChange={this.handleChange1} />
 
             <SelectContainer
-              options={option2}
+              options={options2}
               onChange={this.handleChange2} />
 
         </Form>
