@@ -42,11 +42,16 @@ class SearchForm extends Component {
 
     this.state = {
       selectedOption1: [],
-      selectedOption2: []
+      selectedOption2: [],
+
+      options1: options,
+      options2: options
     }
 
     this.handleChange2       = this.handleChange2.bind(this);
     this.handleChange1       = this.handleChange1.bind(this);
+
+    this.proceedDisabledOptions = this.proceedDisabledOptions.bind(this);
 
     //@TODO move options array into a top of the search form. so we can pass it from one source.
     // from parent component into child component
@@ -67,8 +72,9 @@ class SearchForm extends Component {
     // })
     // console.log(values)
     //
-    // this.setState({ selectedOption1: options });
-    console.log(`Option selected:`, options);
+
+    this.setState({ selectedOption1: options });
+    // console.log(`Option selected:`, options);
   }
 
   handleChange2 = (options) => {
@@ -82,45 +88,72 @@ class SearchForm extends Component {
     //   values.push({ 'value': item.value, 'label': item.label });
     // })
     // // console.log(z)
+
     // this.setState({ selectedOption2: values });
-    // this.setState({ selectedOption2: options });
-    console.log(`Option selected:`, options);
+
+    this.setState({ selectedOption2: options });
+    // console.log(`Option selected:`, options);
   }
 
   componentDidMount() {
-   // this.timerID = setInterval(
-   //   () => this.tick(),
-   //   1000
-   // );
    console.log('mount');
+ }
+
+ proceedDisabledOptions() {
+
+   const { selectedOption1, selectedOption2 } = this.state;
+   // console.log(this.state.selectedOption1)
+   // console.log(this.state.selectedOption2)
+
+   console.log(selectedOption1)
+   console.log(selectedOption2)
+
+
+   // _.map((options),(item) => {
+   //
+   //   console.log(item)
+   //   item.isDisabled = true;
+   // });
+   //
+   // console.log(options);
  }
 
  componentDidUpdate(prevProps, prevState) {
    console.log('update');
 
-   // console.log(this.state.selectedOption1)
-   // console.log(this.state.selectedOption2)
+   this.proceedDisabledOptions() ;
+
 
  }
 
-
+ // <SelectContainer options={options} onChange={this.handleChange1} />
+ // <SelectContainer options={options} onChange={this.handleChange2} />
   render(){
     const  selectedOption1  = this.state.selectedOption1;
     const  selectedOption2  = this.state.selectedOption2;
+
+    const option1 = this.state.option1;
+    const option2 = this.state.option2;
+
     return (
       <Fragment>
         <Form onSubmit={this.handleSubmit}>
 
-            <SelectContainer options={options} onChange={this.handleChange1} />
-            <SelectContainer options={options} onChange={this.handleChange2} />
+            <SelectContainer
+              options={option1}
+              onChange={this.handleChange1} />
+
+            <SelectContainer
+              options={option2}
+              onChange={this.handleChange2} />
 
         </Form>
 
         <div>
-          One - {!(selectedOption1)? "nothing" : selectedOption1}
+          One - {this.state.selectedOption1}
         </div>
         <div>
-          Two - {!(selectedOption2)? "nothing" : selectedOption2}
+          Two - {this.state.selectedOption2}
         </div>
 
 

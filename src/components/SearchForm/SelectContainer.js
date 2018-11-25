@@ -11,7 +11,7 @@ const OptionsList = ( options ) => {
   const opts = options.map((item) => {
     // console.log(item)
 
-    const isDisabled = item.disabled;
+    const isDisabled = item.isDisabled;
     // i'm doing this for the sake of logic. right now we're using label, value.
     // but we should use id and label
     // const key   = item.id;
@@ -45,14 +45,16 @@ class SelectContainer extends Component {
       placeholder: props.placeholder
     }
     // console.log(props.placeholder)
-    // this.handleChange  = this.handleChange.bind(this);
+    this.handleChange  = this.handleChange.bind(this);
 
 
   }
 
-  // handleChange(items) {
-  //   this.props.onChange(items)
-  // }
+  handleChange(items) {
+    // this.props.onChange(items)
+    // console.log(items);
+    this.props.onChange(items)
+  }
 
 
   //
@@ -71,7 +73,7 @@ class SelectContainer extends Component {
       return (
         <Select mode="multiple"
                 style={{ width: '100%' }}
-                
+                onChange={this.handleChange}
                 placeholder={this.state.placeholder}>
               {OptionsList(options)}
         </Select>
