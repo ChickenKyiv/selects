@@ -14,6 +14,11 @@ import SelectContainer from './SelectContainer';
 
 
 //@TODO test it later with IDS instead of text at values
+
+//@TODO update it with fetching data from server
+
+//@TODO update for graphql work
+
 const options = [
   { value: 'chocolate',  label: 'Chocolate'},
   { value: 'strawberry', label: 'Strawberry'},
