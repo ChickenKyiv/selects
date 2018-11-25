@@ -111,8 +111,8 @@ class SearchForm extends Component {
       <Fragment>
         <Form onSubmit={this.handleSubmit}>
 
-            <SelectContainer options={options} onChange={handleChange1} />
-            <SelectContainer options={options} onChange={handleChange2} />
+            <SelectContainer options={options} onChange={this.handleChange1} />
+            <SelectContainer options={options} onChange={this.handleChange2} />
 
         </Form>
 
