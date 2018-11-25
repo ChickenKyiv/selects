@@ -24,6 +24,7 @@ const options = [
   { value: 'vanilla Chino',    label: 'Vanilla Chino'},
   { value: 'vanilla double',    label: 'Vanilla Double' }
 ];
+
 // const options = [
 //   { value: 'chocolate',  label: 'Chocolate',  isDisabled: true },
 //   { value: 'strawberry', label: 'Strawberry', isDisabled: false },
@@ -110,8 +111,8 @@ class SearchForm extends Component {
       <Fragment>
         <Form onSubmit={this.handleSubmit}>
 
-            <SelectContainer />
-            <SelectContainer />
+            <SelectContainer options={options} onChange={handleChange1} />
+            <SelectContainer options={options} onChange={handleChange2} />
 
         </Form>
 

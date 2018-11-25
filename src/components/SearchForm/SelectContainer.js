@@ -4,13 +4,40 @@ import {
 } from 'antd';
 // import shortid from 'shortid';
 
+const Option = Select.Option;
+
+const OptionsList = ({ options }) => {
+
+  const opts = options.map((item) => {
+    // console.log(item)
+
+    const isDisabled = ( item.disabled ) ? 'disabled' : ' ';
+    // i'm doing this for the sake of logic. right now we're using label, value.
+    // but we should use id and label
+    // const key   = item.id;
+    const value = item.value;
+    const label = item.label;
+
+    return (
+      <Option value={value} {isDisabled}>
+        {label}
+      </Option>
+    )
+  });
+
+  return opts;
+
+};
+
+
+
 class SelectContainer extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      list       : props.list,
+      // list       : props.list,
       flag       : props.flag,
       // selected     : [],
       // name       : ( (props.flag) ? 'allowed' : 'excluded' ) + props.placeholder,
@@ -18,30 +45,21 @@ class SelectContainer extends Component {
       placeholder: props.placeholder
     }
     // console.log(props.placeholder)
-    this.handleChange  = this.handleChange.bind(this);
+    // this.handleChange  = this.handleChange.bind(this);
 
 
   }
 
-  handleChange(items) {
-    this.props.onChange(items)
-  }
+  // handleChange(items) {
+  //   this.props.onChange(items)
+  // }
 
 
 
 
   render() {
 
-      const options = this.state.list;
-      // console.log(this.state.list)
-      const opts    = options.map((item) => {
-        // console.log(item)
-        return (
-          <Select.Option key={item}>
-            {item}
-          </Select.Option>
-        )
-      });
+      const options = this.props.options;
 
       // console.log(this.props.disabled)
 
@@ -50,7 +68,7 @@ class SelectContainer extends Component {
                 style={{ width: '100%' }}
                 onChange={this.handleChange}
                 placeholder={this.state.placeholder}>
-              {opts}
+              {OptionsList(options)}
         </Select>
       );
 
