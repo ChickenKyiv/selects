@@ -1,4 +1,12 @@
-https://github.com/eunikitin/modern-package-boilerplate
+<!-- https://github.com/eunikitin/modern-package-boilerplate -->
+
+
+Structure
+SearchForm
+  - FormElementsLayout
+  - GroupedElements
+    - SelectContainer
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

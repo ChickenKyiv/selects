@@ -1,7 +1,5 @@
 
-import Debug from './Debug';
-
-class SelectContainer extends Component {
+class FormElementsLayout extends Component {
 
   constructor(props) {
     super(props);
@@ -35,9 +33,6 @@ class SelectContainer extends Component {
                 placeholder={this.state.placeholder}>
               {OptionsList(options)}
         </Select>
-
-
-        <Debug a={this.state.selectedOption1} b={this.state.selectedOption2} />
       );
 
   }
@@ -47,3 +42,5 @@ class SelectContainer extends Component {
 };
 
 export default SelectContainer;
+// https://ant.design/components/select/#components-select-demo-select-users
+// @TODO add tests so we cannot pass an empty array to options

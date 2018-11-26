@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ExampleView from '.components/SearchForm/ExampleView';
+import ExampleView from './components/SearchForm/ExampleView';
 
 // import SearchForm from './components/SearchForm/SearchForm'
 

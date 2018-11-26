@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   Select
 } from 'antd';
-// import shortid from 'shortid';
 
 const Option = Select.Option;
 
@@ -29,7 +28,7 @@ const OptionsList = ( options ) => {
 
 };
 
-
+//@TODO we can move select away from this container.
 
 class SelectContainer extends Component {
 
@@ -47,7 +46,7 @@ class SelectContainer extends Component {
 
   }
 
-  handleChange(items) {    
+  handleChange(items) {
     // console.log(items);
     this.props.onChange(items)
   }
