@@ -37,9 +37,6 @@ class SelectContainer extends Component {
     super(props);
 
     this.state = {
-      // list       : props.list,
-      flag       : props.flag,
-      // selected     : [],
       // name       : ( (props.flag) ? 'allowed' : 'excluded' ) + props.placeholder,
       name       : 'the_name',
       placeholder: props.placeholder
@@ -50,25 +47,16 @@ class SelectContainer extends Component {
 
   }
 
-  handleChange(items) {
-    // this.props.onChange(items)
+  handleChange(items) {    
     // console.log(items);
     this.props.onChange(items)
   }
 
 
-  //
-  // <Select mode="multiple"
-  //         style={{ width: '100%' }}
-  //         onChange={this.handleChange}
-  //         placeholder={this.state.placeholder}>
-  //       {OptionsList(options)}
-  // </Select>
   render() {
 
       const options = this.props.options;
 
-      // console.log(this.props.disabled)
 
       return (
         <Select mode="multiple"

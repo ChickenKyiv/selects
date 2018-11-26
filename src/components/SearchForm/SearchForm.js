@@ -9,6 +9,7 @@ import {
 
 
 import _ from 'lodash';
+
 import SelectContainer from './SelectContainer';
 
 
@@ -50,7 +51,7 @@ class SearchForm extends Component {
     this.handleChange2       = this.handleChange2.bind(this);
     this.handleChange1       = this.handleChange1.bind(this);
 
-    this.proceedDisabledOptions = this.proceedDisabledOptions.bind(this);
+    // this.proceedDisabledOptions = this.proceedDisabledOptions.bind(this);
 
     //@TODO move options array into a top of the search form. so we can pass it from one source.
     // from parent component into child component
@@ -79,6 +80,7 @@ class SearchForm extends Component {
   handleChange2 = (selected) => {
 
     var clone_of_state_1 = this.state.options1;
+
     var kle = _.map(clone_of_state_1, (item) => {
 
       console.log( selected.includes(item.value) )
@@ -87,7 +89,7 @@ class SearchForm extends Component {
       }
 
     })
-    // this.setState({ selectedOption2: values });
+
 
     this.setState({ selectedOption2: selected });
   }
