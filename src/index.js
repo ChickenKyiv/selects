@@ -1,8 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import       thankYou from 'examples/modern';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+export const modern = thankYou;
+
+console.log(thankYou());
