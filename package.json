@@ -35,7 +35,7 @@
     "clean": "rimraf ./coverage ./lib",
     "dev": "cross-env NODE_ENV=development rollup -c -o lib/index.js",
     "build": "cross-env NODE_ENV=production rollup -c -o lib/index.js",
-    "test": "cross-env NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "test:cover": "cross-env NODE_ENV=test jest --coverage",
     "coveralls": "npm run test:cover && cat ./coverage/lcov.info | coveralls",
@@ -49,7 +49,8 @@
     "react-dom": "^15 || ^16"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "babel-core": "6.26.0",
