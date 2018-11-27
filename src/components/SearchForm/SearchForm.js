@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import {
   Form,
-  Input,
-  Col,
-  Button,
-  Select
+  // Input,
+  // Col,
+  // Button,
+
 } from 'antd';
 
 
@@ -37,65 +37,17 @@ const options = [
 
 class SearchForm extends Component {
 
-  constructor(props) {
-    super(props)
-
-
-    this.state = {
-      selectedOption1: [],
-      selectedOption2: [],
-
-      options1: options,
-      options2: options
-    }
-
-    this.handleChange2       = this.handleChange2.bind(this);
-    this.handleChange1       = this.handleChange1.bind(this);
+  // constructor(props) {
+  //   super(props)
+  //
+  //   // this.proceedDisabledOptions = this.proceedDisabledOptions.bind(this);
+  //
+  //   //@TODO move options array into a top of the search form. so we can pass it from one source.
+  //   // from parent component into child component
+  // }
 
 
 
-    // this.proceedDisabledOptions = this.proceedDisabledOptions.bind(this);
-
-    //@TODO move options array into a top of the search form. so we can pass it from one source.
-    // from parent component into child component
-  }
-
-
-  handleChange1 = (selected) => {
-
-    // really bored, and making names badly. @TODO change it, ple A se
-    var clone_of_state_2 = this.state.options2;
-
-
-      var kle = _.map(clone_of_state_2, (item) => {
-
-        console.log( selected.includes(item.value) )
-        if( selected.includes(item.value) ){
-          item.isDisabled = true;
-        }
-      })
-
-
-    this.setState({ selectedOption1: selected });
-
-  }
-
-  handleChange2 = (selected) => {
-
-    var clone_of_state_1 = this.state.options1;
-
-    var kle = _.map(clone_of_state_1, (item) => {
-
-      console.log( selected.includes(item.value) )
-      if( selected.includes(item.value) ){
-        item.isDisabled = true;
-      }
-
-    })
-
-
-    this.setState({ selectedOption2: selected });
-  }
 
  //  componentDidMount() {
  //   console.log('mount');
@@ -110,33 +62,18 @@ class SearchForm extends Component {
 
  }
 
- // <SelectContainer options={options} onChange={this.handleChange1} />
- // <SelectContainer options={options} onChange={this.handleChange2} />
-
   render(){
-    const  selectedOption1  = this.state.selectedOption1;
-    const  selectedOption2  = this.state.selectedOption2;
 
-    const { options1, options2 } = this.state;
     // const  = this.state.option2;
 
-    // console.log(options1, options2);
 
     return (
       <Fragment>
         <Form onSubmit={this.handleSubmit}>
 
-            <SelectContainer
-              options={options1}
-              onChange={this.handleChange1} />
-
-            <SelectContainer
-              options={options2}
-              onChange={this.handleChange2} />
+          <GroupedElements type={false} options={options} />
 
         </Form>
-
-
 
 
       </Fragment>
