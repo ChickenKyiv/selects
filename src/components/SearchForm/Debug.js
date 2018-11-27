@@ -35,7 +35,7 @@ class Debug extends Component {
           <div>
             Two - {this.props.b}
           </div>
-        <Fragment />
+        </Fragment>
       );
 
   }

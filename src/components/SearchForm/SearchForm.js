@@ -8,10 +8,11 @@ import {
 } from 'antd';
 
 
-import _ from 'lodash';
+// import _ from 'lodash';
 
 // import SelectContainer from './SelectContainer';
-import GroupedElements from './GroupedElements';
+import FormElementsLayout from './FormElementsLayout';
+// import GroupedElements from './GroupedElements';
 
 
 //@TODO test it later with IDS instead of text at values
@@ -71,8 +72,8 @@ class SearchForm extends Component {
       <Fragment>
         <Form onSubmit={this.handleSubmit}>
 
-          <GroupedElements type={false} options={options} />
 
+          <FormElementsLayout options={options} />
         </Form>
 
 

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
+import _ from 'lodash';
 import Debug from './Debug';
-
 import SelectContainer from './SelectContainer';
 
 class GroupedElements extends Component {
@@ -13,12 +13,12 @@ class GroupedElements extends Component {
       selectedOption1: [],
       selectedOption2: [],
 
-      options1: options,
-      options2: options
+      options1: this.props.options,
+      options2: this.props.options
     }
 
-    this.handleChange2       = this.handleChange2.bind(this);
-    this.handleChange1       = this.handleChange1.bind(this);
+    this.handleChange2   = this.handleChange2.bind(this);
+    this.handleChange1   = this.handleChange1.bind(this);
 
 
 
@@ -84,7 +84,7 @@ class GroupedElements extends Component {
             options={options2}
             onChange={this.handleChange2} />
 
-          <Debug a={this.state.selectedOption1} b={this.state.selectedOption2} />
+          <Debug a={selectedOption1} b={selectedOption2} />
         </Fragment>
       );
 

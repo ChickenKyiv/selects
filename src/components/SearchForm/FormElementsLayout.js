@@ -1,3 +1,6 @@
+import React, { Component, Fragment } from 'react';
+
+import GroupedElements from './GroupedElements';
 
 class FormElementsLayout extends Component {
 
@@ -27,12 +30,7 @@ class FormElementsLayout extends Component {
 
 
       return (
-        // <Select mode="multiple"
-        //         style={{ width: '100%' }}
-        //         onChange={this.handleChange}
-        //         placeholder={this.state.placeholder}>
-        //       {OptionsList(options)}
-        // </Select>
+        <GroupedElements type={false} options={options} />
       );
 
   }
@@ -41,6 +39,6 @@ class FormElementsLayout extends Component {
 
 };
 
-export default SelectContainer;
+export default FormElementsLayout;
 // https://ant.design/components/select/#components-select-demo-select-users
 // @TODO add tests so we cannot pass an empty array to options
