@@ -1,7 +1,9 @@
 
 import Debug from './Debug';
 
-class SelectContainer extends Component {
+import SelectContainer from './SelectContainer';
+
+class GroupedElements extends Component {
 
   constructor(props) {
     super(props);
@@ -25,16 +27,16 @@ class SelectContainer extends Component {
 
   render() {
 
-      const options = this.props.options;
+      // const options = this.props.options;
 
 
       return (
-        <Select mode="multiple"
-                style={{ width: '100%' }}
-                onChange={this.handleChange}
-                placeholder={this.state.placeholder}>
-              {OptionsList(options)}
-        </Select>
+        // <Select mode="multiple"
+        //         style={{ width: '100%' }}
+        //         onChange={this.handleChange}
+        //         placeholder={this.state.placeholder}>
+        //       {OptionsList(options)}
+        // </Select>
 
 
         <Debug a={this.state.selectedOption1} b={this.state.selectedOption2} />
@@ -46,4 +48,4 @@ class SelectContainer extends Component {
 
 };
 
-export default SelectContainer;
+export default GroupedElements;

@@ -10,8 +10,8 @@ import {
 
 import _ from 'lodash';
 
-import SelectContainer from './SelectContainer';
-
+// import SelectContainer from './SelectContainer';
+import GroupedElements from './GroupedElements';
 
 
 //@TODO test it later with IDS instead of text at values
@@ -40,6 +40,7 @@ class SearchForm extends Component {
   constructor(props) {
     super(props)
 
+
     this.state = {
       selectedOption1: [],
       selectedOption2: [],
@@ -50,6 +51,8 @@ class SearchForm extends Component {
 
     this.handleChange2       = this.handleChange2.bind(this);
     this.handleChange1       = this.handleChange1.bind(this);
+
+
 
     // this.proceedDisabledOptions = this.proceedDisabledOptions.bind(this);
 
@@ -133,12 +136,7 @@ class SearchForm extends Component {
 
         </Form>
 
-        <div>
-          One - {this.state.selectedOption1}
-        </div>
-        <div>
-          Two - {this.state.selectedOption2}
-        </div>
+
 
 
       </Fragment>
