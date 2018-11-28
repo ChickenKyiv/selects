@@ -3,6 +3,9 @@ import _ from 'lodash';
 import Debug from './Debug';
 import SelectContainer from './SelectContainer';
 
+//@TODO can be updated by combining handleChange methods into one method
+// they are similar but i'm to lazy to do it.
+
 class GroupedElements extends Component {
 
   constructor(props) {
@@ -23,6 +26,15 @@ class GroupedElements extends Component {
 
 
   }
+
+  proceedDataForParent(){
+    // here we need to pack allowed and dissallowed items into one array/object with a name
+    // of element/attribute that we have at search form
+
+
+    
+  }
+
   //
   // handleChange(items) {
   //   // console.log(items);
