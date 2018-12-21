@@ -6,8 +6,8 @@
     "@groceristar/groceristar-fetch": "1.1.33",
     "antd": "3.11.2",
     "lodash": "4.17.11",
-    "react": "16.6.3",
-    "react-dom": "16.6.3",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
     "react-scripts": "2.1.1",
     "react-select": "2.1.2",
     "reworm": "2.2.1"
