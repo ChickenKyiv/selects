@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
-import GroupedElements from './GroupedElements';
+import { GroupedElements } from '@groceristar/select-component';
+
+// import GroupedElements from './GroupedElements';
 
 class FormElementsLayout extends Component {
 
