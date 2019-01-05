@@ -29,13 +29,15 @@ class FormElementsLayout extends Component {
 
   render() {
 
-      const options = this.props.options;
+      const options1 = this.props.options1;
+      const options2 = this.props.options2;
 
 
       return (
         <Fragment>
 
-          <GroupedElements type={false} options={options} />
+          <GroupedElements type={false} options1={options1} options2={options2} />
+
           <hr />
           {/*
           <ReactSelectWrapper

@@ -81,13 +81,25 @@ class SearchForm extends Component {
 
     // const  = this.state.option2;
 
+    const ingredientsData = toOptAntD( getFormattedIngredients() );
+    const ingredientsData2 = toOptAntD( getFormattedIngredients() );
+
+    console.log(ingredientsData);
+    console.log(ingredientsData2);
+
+    const attributeData   = toOptAntD( getFormattedAttributes('holidays') );
+    const attributeData1   = toOptAntD( getFormattedAttributes('holidays') );
+
+    const attributeData2  = toOptAntD( getFormattedAttributes('diets') );
+    const attributeData21  = toOptAntD( getFormattedAttributes('diets') );
+
 
     return (
       <Fragment>
         <Form onSubmit={this.handleSubmit}>
 
 
-          <FormElementsLayout options1={options} options2={options} />
+          <FormElementsLayout options1={attributeData} options2={attributeData1} />
 
         </Form>
 
