@@ -34,15 +34,17 @@ class FormElementsLayout extends Component {
 
       return (
         <Fragment>
+
           <GroupedElements type={false} options={options} />
           <hr />
-
+          {/*
           <ReactSelectWrapper
             options={options}
             onChange={this.handleChange}
             value={options[0]}
             onBlur={this.handleChange}
             />
+            */}
         </Fragment>
 
       );
@@ -54,5 +56,6 @@ class FormElementsLayout extends Component {
 };
 
 export default FormElementsLayout;
+
 // https://ant.design/components/select/#components-select-demo-select-users
 // @TODO add tests so we cannot pass an empty array to options

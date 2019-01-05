@@ -15,6 +15,19 @@ import FormElementsLayout from './FormElementsLayout';
 // import GroupedElements from './GroupedElements';
 
 
+
+
+import {
+  getFormattedAttributes,
+  getPlaceholder,
+
+  getFormattedIngredients,
+  toOpt,
+  toOptAntD
+} from "../selectors/selector"
+
+
+
 //@TODO test it later with IDS instead of text at values
 
 //@TODO update it with fetching data from server
@@ -30,6 +43,7 @@ const options = [
   { value: 'vanilla Chino',    label: 'Vanilla Chino'},
   { value: 'vanilla double',    label: 'Vanilla Double' }
 ];
+
 
 
 
@@ -73,7 +87,8 @@ class SearchForm extends Component {
         <Form onSubmit={this.handleSubmit}>
 
 
-          <FormElementsLayout options={options} />
+          <FormElementsLayout options1={options} options2={options} />
+
         </Form>
 
 
