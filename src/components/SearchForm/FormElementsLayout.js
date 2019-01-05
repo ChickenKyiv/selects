@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import { GroupedElements } from '@groceristar/select-component';
+import { GroupedElements, ReactSelectWrapper } from '@groceristar/select-component';
 
 // import GroupedElements from './GroupedElements';
 
@@ -16,15 +16,15 @@ class FormElementsLayout extends Component {
     //   placeholder: props.placeholder
     // }
     // // console.log(props.placeholder)
-    // this.handleChange  = this.handleChange.bind(this);
+    this.handleChange  = this.handleChange.bind(this);
 
 
   }
 
-  // handleChange(items) {
-  //   // console.log(items);
-  //   this.props.onChange(items)
-  // }
+  handleChange(items) {
+    console.log(items);
+    // this.props.onChange(items)
+  }
 
 
   render() {
@@ -33,7 +33,18 @@ class FormElementsLayout extends Component {
 
 
       return (
-        <GroupedElements type={false} options={options} />
+        <Fragment>
+          <GroupedElements type={false} options={options} />
+          <hr />
+
+          <ReactSelectWrapper
+            options={options}
+            onChange={this.handleChange}
+            value={options[0]}
+            onBlur={this.handleChange}
+            />
+        </Fragment>
+
       );
 
   }
