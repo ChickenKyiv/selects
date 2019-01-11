@@ -1,14 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import {
-  Form,
-  // Input,
-  // Col,
-  // Button,
+import { Form } from 'antd';
 
-} from 'antd';
-
-
-// import _ from 'lodash';
 
 // import SelectContainer from './SelectContainer';
 import FormElementsLayout from './FormElementsLayout';
@@ -33,18 +25,6 @@ import {
 //@TODO update it with fetching data from server
 
 //@TODO update for graphql work
-
-const options = [
-  { value: 'chocolate',  label: 'Chocolate'},
-  { value: 'strawberry', label: 'Strawberry'},
-  { value: 'vanilla',    label: 'Vanilla'  },
-  { value: 'vanilla-ice',    label: 'Vanilla Ice'},
-  { value: 'vanilla latte',    label: 'Vanilla Latte'},
-  { value: 'vanilla Chino',    label: 'Vanilla Chino'},
-  { value: 'vanilla double',    label: 'Vanilla Double' }
-];
-
-
 
 
 // @TODO this component can do better just by calling a different db queries for each of select.
@@ -81,16 +61,16 @@ class SearchForm extends Component {
 
     // const  = this.state.option2;
 
-    const ingredientsData = toOptAntD( getFormattedIngredients() );
+    const ingredientsData  = toOptAntD( getFormattedIngredients() );
     const ingredientsData2 = toOptAntD( getFormattedIngredients() );
 
     console.log(ingredientsData);
     console.log(ingredientsData2);
 
-    const attributeData   = toOptAntD( getFormattedAttributes('holidays') );
+    const attributeData    = toOptAntD( getFormattedAttributes('holidays') );
     const attributeData1   = toOptAntD( getFormattedAttributes('holidays') );
 
-    const attributeData2  = toOptAntD( getFormattedAttributes('diets') );
+    const attributeData2   = toOptAntD( getFormattedAttributes('diets') );
     const attributeData21  = toOptAntD( getFormattedAttributes('diets') );
 
 
@@ -99,7 +79,9 @@ class SearchForm extends Component {
         <Form onSubmit={this.handleSubmit}>
 
 
-          <FormElementsLayout options1={attributeData} options2={attributeData1} />
+          <FormElementsLayout
+            options1={attributeData}
+            options2={attributeData1} />
 
         </Form>
 
