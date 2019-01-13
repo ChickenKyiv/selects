@@ -1203,10 +1203,10 @@ ant-design-palettes@^1.1.3:
   dependencies:
     tinycolor2 "^1.4.1"
 
-antd@3.12.1:
-  version "3.12.1"
-  resolved "https://registry.yarnpkg.com/antd/-/antd-3.12.1.tgz#d1b3138ee907f7884f9eae2bfdee0b1b714bfe62"
-  integrity sha512-CExkSp+e1GxKYlfI6f9pTf2q+m6zuECvnBJblMiTx/sM29P2uEkJcmt1JysFGMS7MNa/HAel5SvvmB4lEEPMJw==
+antd@3.12.3:
+  version "3.12.3"
+  resolved "https://registry.yarnpkg.com/antd/-/antd-3.12.3.tgz#ffb409c5317e17583bf8493a4726d77ac839c7d2"
+  integrity sha512-fKLqE5rqiAqKwi3nT8lopYZFj/Kbc3UCEkX4EsZOh8ZZHVNGirvZofRxLt4smpHmpj6NLbhR6va/kXLFe35RiQ==
   dependencies:
     "@ant-design/icons" "~1.1.16"
     "@ant-design/icons-react" "~1.1.2"
@@ -1227,7 +1227,7 @@ antd@3.12.1:
     rc-calendar "~9.10.3"
     rc-cascader "~0.17.0"
     rc-checkbox "~2.1.5"
-    rc-collapse "~1.10.0"
+    rc-collapse "~1.10.2"
     rc-dialog "~7.3.0"
     rc-drawer "~1.7.6"
     rc-dropdown "~2.4.1"
@@ -8458,6 +8458,17 @@ rc-collapse@~1.10.0:
     prop-types "^15.5.6"
     rc-animate "2.x"
 
+rc-collapse@~1.10.2:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/rc-collapse/-/rc-collapse-1.10.2.tgz#2136c9aca8f5f8e2af66d6454adde56693fa0f00"
+  integrity sha512-AtEE4rMXEBT05gScduc+NQf/257wqE0xk4tNX4N1DBq0qTx19xGcwX3EXDD+ZF8KuZ/A25pgmviXad/hthNQSg==
+  dependencies:
+    classnames "2.x"
+    css-animation "1.x"
+    prop-types "^15.5.6"
+    rc-animate "2.x"
+    react-is "^16.7.0"
+
 rc-dialog@~7.2.1:
   version "7.2.1"
   resolved "https://registry.yarnpkg.com/rc-dialog/-/rc-dialog-7.2.1.tgz#ac92fcffdf2a0eaa64b77f829336653d911a57be"
@@ -8961,6 +8972,11 @@ react-input-autosize@^2.2.1:
   integrity sha512-3+K4CD13iE4lQQ2WlF8PuV5htfmTRLH6MDnfndHM6LuBRszuXnuyIfE7nhSKt8AzRBZ50bu0sAhkNMeS5pxQQA==
   dependencies:
     prop-types "^15.5.8"
+
+react-is@^16.7.0:
+  version "16.7.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.7.0.tgz#c1bd21c64f1f1364c6f70695ec02d69392f41bfa"
+  integrity sha512-Z0VRQdF4NPDoI0tsXVMLkJLiwEBa+RP66g0xDHxgxysxSoCUccSten4RTF/UFvZF1dZvZ9Zu1sx+MDXwcOR34g==
 
 react-lazy-load@^3.0.13:
   version "3.0.13"
