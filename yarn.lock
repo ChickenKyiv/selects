@@ -868,10 +868,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
 
-"@groceristar/groceristar-fetch@1.1.54":
-  version "1.1.54"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.1.54.tgz#a4be5929c6b9ffc065dd94cab46e0f4f6ddf81c7"
-  integrity sha512-dFlgAtAuODi8UpVNlDY6GimCIUx1rqC1zs4wY2iiY6nc43IoY8ppq3+t7D4eY2t+97lOZtJazDsOV8vo8NtO/w==
+"@groceristar/groceristar-fetch@1.1.56":
+  version "1.1.56"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.1.56.tgz#6a6f6c3b400a5c1d3a44afbd5babb1c6286f8507"
+  integrity sha512-KjzlFG+LJFyTmSMIjVU46/PARkGCgAYX1Su7a3PCHsjTAPekzujmLx0Q4GQkWI5jYj4JWscKw/JzF9LLsdl1vA==
   dependencies:
     fs "0.0.1-security"
     lodash "^4.17.10"
