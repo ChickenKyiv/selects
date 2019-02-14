@@ -868,10 +868,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
 
-"@groceristar/groceristar-fetch@1.1.62":
-  version "1.1.62"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.1.62.tgz#64aea9371be1a6ba5b6b04b2d26720c2c32bec84"
-  integrity sha512-UJ/GlNagqa9UQs/NqdmdXB0IhpL8At3MtITywfcjJ+LvdIJhSszrA+nnPH9/JrdJLenbmY0GEtxp6zqN01MESQ==
+"@groceristar/groceristar-fetch@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.2.0.tgz#e84ffe99559b4453e3d20e7af35bb4195de661b8"
+  integrity sha512-8pfz5Q6oRLFm5obWyNpZqe4nNYXfA4Ku4ZeVlRm/1j/GeWUnKenCWNRshwOMQuNM0mZ9ZLgToXCFBIs1YUZX9A==
   dependencies:
     dayjs "^1.8.0"
     fs "0.0.2"
