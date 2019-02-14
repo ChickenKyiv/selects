@@ -868,17 +868,27 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
 
-"@groceristar/groceristar-fetch@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.2.0.tgz#e84ffe99559b4453e3d20e7af35bb4195de661b8"
-  integrity sha512-8pfz5Q6oRLFm5obWyNpZqe4nNYXfA4Ku4ZeVlRm/1j/GeWUnKenCWNRshwOMQuNM0mZ9ZLgToXCFBIs1YUZX9A==
+"@groceristar/groceristar-fetch@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.2.1.tgz#9a62244d30ca1fe1fc6b0388994a8246249ff96c"
+  integrity sha512-A6gydrizY+5xGYGnvg6eERw4R/8CHoH457tI6abNKkzx/wv5BsP7mxDLC5+nWfi0ezwoy7TbB7HAybn/UaTvKQ==
   dependencies:
+    "@groceristar/sd-wrapper" "^1.0.2"
     dayjs "^1.8.0"
     fs "0.0.2"
     lodash "^4.17.10"
     standard "^12.0.1"
     underscore "^1.9.1"
     uuid "3.3.2"
+
+"@groceristar/sd-wrapper@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.2.tgz#f6dbf20cb7d1755787ddf8fdf6135d2af4232fd0"
+  integrity sha512-zXJigGAu5S7IrX2tQRRbvEcrRygbe+CZsKkBKsHrsnnJDX8UU9Gi96nW62AeF/g6jUEnx+Uh6S7+d+/AmfhTIw==
+  dependencies:
+    fs "^0.0.1-security"
+    path "^0.12.7"
+    uuid "^3.3.2"
 
 "@groceristar/select-component@1.0.7":
   version "1.0.7"
@@ -4534,6 +4544,11 @@ fs@0.0.2:
   resolved "https://registry.yarnpkg.com/fs/-/fs-0.0.2.tgz#e1f244ef3933c1b2a64bd4799136060d0f5914f8"
   integrity sha1-4fJE7zkzwbKmS9R5kTYGDQ9ZFPg=
 
+fs@^0.0.1-security:
+  version "0.0.1-security"
+  resolved "https://registry.yarnpkg.com/fs/-/fs-0.0.1-security.tgz#8a7bd37186b6dddf3813f23858b57ecaaf5e41d4"
+  integrity sha1-invTcYa23d84E/I4WLV+yq9eQdQ=
+
 fsevents@1.2.4, fsevents@^1.2.2, fsevents@^1.2.3:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-1.2.4.tgz#f41dcb1af2582af3692da36fc55cbd8e1041c426"
@@ -7612,6 +7627,14 @@ path-type@^3.0.0:
   dependencies:
     pify "^3.0.0"
 
+path@^0.12.7:
+  version "0.12.7"
+  resolved "https://registry.yarnpkg.com/path/-/path-0.12.7.tgz#d4dc2a506c4ce2197eb481ebfcd5b36c0140b10f"
+  integrity sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8=
+  dependencies:
+    process "^0.11.1"
+    util "^0.10.3"
+
 pbkdf2@^3.0.3:
   version "3.0.16"
   resolved "https://registry.yarnpkg.com/pbkdf2/-/pbkdf2-3.0.16.tgz#7404208ec6b01b62d85bf83853a8064f8d9c2a5c"
@@ -8409,7 +8432,7 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.0.tgz#a37d732f4271b4ab1ad070d35508e8290788ffaa"
   integrity sha512-MtEC1TqN0EU5nephaJ4rAtThHtC86dNN9qCuEhtshvpVBkAW5ZO7BASN9REnF9eoXGcRub+pFuKEpOHE+HbEMw==
 
-process@^0.11.10:
+process@^0.11.1, process@^0.11.10:
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
