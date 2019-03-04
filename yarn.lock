@@ -830,10 +830,10 @@
     lodash "^4.17.10"
     uuid "3.3.2"
 
-"@groceristar/select-component@1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@groceristar/select-component/-/select-component-1.0.7.tgz#682624cbb2a51a989a3ddb18864694833afb9819"
-  integrity sha512-exdj4q0NEI4RtX7wuyLih2ASia9upqyF9gtYVpiaIdP7AcONvT9Hrc7P388YB9HqEjXaR6ztIE5jEUb/b1URiw==
+"@groceristar/select-component@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@groceristar/select-component/-/select-component-1.0.9.tgz#09bc0ec13ec161d51303f9f7d8694ffcc8795c5c"
+  integrity sha512-h3QmYca2cSBocF6k4fukHaBXrVtuMbqG0I+yiW0xqyvpAPVo3MxiYKvgHyLwVj5qkybxbPndKNzuVoYjByvdsg==
   dependencies:
     antd "^3.11.2"
     react-select "^2.1.2"
