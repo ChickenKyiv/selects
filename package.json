@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@groceristar/groceristar-fetch": "1.2.1",
+    "@groceristar/groceristar-fetch": "1.2.8",
     "@groceristar/select-component": "1.0.8",
     "antd": "3.14.0",
     "lodash": "4.17.11",
