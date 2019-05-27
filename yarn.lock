@@ -9102,10 +9102,10 @@ react-scripts@2.1.8:
   optionalDependencies:
     fsevents "1.2.4"
 
-react-select@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/react-select/-/react-select-3.0.1.tgz#b498e721d1cb8f71ebe47cf09985bdbb7cbc1404"
-  integrity sha512-F5RAZShmvu8M/wALV5/0YsHIMqEAr+5wqGmxhltXPfOZZEhmqQUYnNZHjyH5ifzHON3aYWdWqc7C1MkiDvuvhg==
+react-select@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/react-select/-/react-select-3.0.3.tgz#f570b7b00e9b8b5bc938c3c834fdac0240e305d8"
+  integrity sha512-/WmzNDvATL2mFMLtZYlfUBHzg6YywglkmwJ52TCuvj2ALNu8gRKSlhkivPfKUWxxWKbolVCXSAh+xuwOQZJykg==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@emotion/cache" "^10.0.9"
