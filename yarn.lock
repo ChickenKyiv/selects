@@ -1337,12 +1337,12 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
 
-"@groceristar/groceristar-fetch@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-2.2.0.tgz#878b758e41f11cb56eac38c66f2cce80cbc88b21"
-  integrity sha512-bXONGexZ5eZaPHPNAxILYZJwDke0FUDlAgywW0hl05Wd+hCc2gkFYhCE/eRq9Z5+d+f28/sIVSrgH+l7SVye2w==
+"@groceristar/groceristar-fetch@2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-2.2.4.tgz#68da9cdb16c42bd99bd930a50c00591c05e12d49"
+  integrity sha512-1FyBqBOyBOm4tG5XEBetRVi4QjdeencxOKKblc2tBCWxyQY0+jTGOYSAN+3gRhwAshKaHypUs7WHp0tmOYOFKw==
   dependencies:
-    "@groceristar/sd-wrapper" "^4.9.2"
+    "@groceristar/sd-wrapper" "^4.11.3"
     dayjs "^1.8.12"
     fs "0.0.2"
     lodash "^4.17.10"
@@ -1350,15 +1350,16 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
-"@groceristar/sd-wrapper@^4.9.2":
-  version "4.9.2"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.9.2.tgz#3c3b14f3f51173723b25a0b6adb39eabceeb6019"
-  integrity sha512-LQQnQURa/Q6ZUD1hi+aGFiDfRjmWlLyq0JP841RG6AjoakXvhjwbEReIrJ4viwxRwuIgnjYqTKs+yMRXFfRB1w==
+"@groceristar/sd-wrapper@^4.11.3":
+  version "4.11.3"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.11.3.tgz#fafa3c713d4d84e945408745974b7a515a9011a2"
+  integrity sha512-jwEmg9ELXiHSzlSbR7GBlhoglB06i4iZucgFZI8bMte2lF+S5w3/MES1noKyzyNcMIHTT8HpYvn7AQCbao47mg==
   dependencies:
     csv-parser "^2.3.0"
     dayjs "^1.8.14"
     lodash "^4.17.11"
     path "^0.12.7"
+    path-exists "^4.0.0"
     uuid "^3.3.2"
     yarn "^1.16.0"
 
@@ -7848,6 +7849,11 @@ path-exists@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
   integrity sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=
+
+path-exists@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-4.0.0.tgz#513bdbe2d3b95d7762e8c1137efa195c6c61b5b3"
+  integrity sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==
 
 path-is-absolute@^1.0.0:
   version "1.0.1"
