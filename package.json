@@ -8,7 +8,7 @@
     "antd": "3.25.0",
     "lodash": "4.17.15",
     "react": "16.10.1",
-    "react-dom": "16.10.1",
+    "react-dom": "16.11.0",
     "react-scripts": "3.1.2",
     "react-select": "3.0.5",
     "reworm": "2.2.1"
