@@ -6,23 +6,27 @@
     "@groceristar/groceristar-fetch": "2.2.7",
     "@groceristar/select-component": "1.0.9",
     "antd": "3.25.2",
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "react-scripts": "3.1.2",
+    "react-scripts": "5.0.0",
     "react-select": "3.0.5",
-    "reworm": "2.2.1"
+    "reworm": "2.2.1",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "snyk": true
 }
