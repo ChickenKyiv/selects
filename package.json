@@ -5,12 +5,12 @@
   "dependencies": {
     "@groceristar/groceristar-fetch": "2.2.7",
     "@groceristar/select-component": "1.0.9",
-    "antd": "3.25.2",
+    "antd": "5.0.0",
     "lodash": "4.17.15",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "react-scripts": "3.1.2",
-    "react-select": "3.0.5",
+    "react-scripts": "5.0.0",
+    "react-select": "4.0.0",
     "reworm": "2.2.1"
   },
   "scripts": {
